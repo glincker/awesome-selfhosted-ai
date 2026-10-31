@@ -967,6 +967,12 @@
     "description": "Lightweight inference runtime from Alibaba for running and training neural networks on devices."
   },
   {
+    "name": "ninfer",
+    "repo": "Neroued/ninfer",
+    "category": "LLM Runtimes and Inference",
+    "description": "Single-GPU inference engine for selected model checkpoints and GPUs, with a CLI and server."
+  },
+  {
     "name": "NVIDIA Dynamo",
     "repo": "ai-dynamo/dynamo",
     "category": "LLM Runtimes and Inference",
