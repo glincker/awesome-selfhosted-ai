@@ -322,6 +322,12 @@
     "rising": true
   },
   {
+    "name": "AiderDesk",
+    "repo": "hotovo/aider-desk",
+    "category": "Coding Assistants",
+    "description": "Desktop app that wraps the Aider coding assistant with a UI, agent mode and MCP support."
+  },
+  {
     "name": "Archon",
     "repo": "coleam00/Archon",
     "category": "Coding Assistants",
