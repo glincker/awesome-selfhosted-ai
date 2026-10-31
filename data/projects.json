@@ -390,6 +390,12 @@
     "description": "Terminal agent with local tools that writes code, runs shell commands and browses the web."
   },
   {
+    "name": "jcode",
+    "repo": "1jehuang/jcode",
+    "category": "Coding Assistants",
+    "description": "Rust coding agent harness built for running many agent sessions at once."
+  },
+  {
     "name": "Kilo Code",
     "repo": "Kilo-Org/kilocode",
     "category": "Coding Assistants",
