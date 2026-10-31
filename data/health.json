@@ -64,7 +64,7 @@
   },
   "langchain-ai/langgraph": {
     "status": "active",
-    "stars": 44198,
+    "stars": 44199,
     "pushed": "2026-10-31",
     "license": "MIT",
     "checked": "2026-10-31"
@@ -148,35 +148,35 @@
   },
   "chatboxai/chatbox": {
     "status": "active",
-    "stars": 42204,
+    "stars": 42205,
     "pushed": "2026-10-29",
     "license": "GPL-3.0",
     "checked": "2026-10-31"
   },
   "CherryHQ/cherry-studio": {
     "status": "active",
-    "stars": 53112,
+    "stars": 53113,
     "pushed": "2026-10-31",
     "license": "AGPL-3.0",
     "checked": "2026-10-31"
   },
   "danny-avila/LibreChat": {
     "status": "active",
-    "stars": 46525,
+    "stars": 46526,
     "pushed": "2026-10-31",
     "license": "MIT",
     "checked": "2026-10-31"
   },
   "lobehub/lobe-chat": {
     "status": "active",
-    "stars": 83623,
+    "stars": 83624,
     "pushed": "2026-10-31",
     "license": "NOASSERTION",
     "checked": "2026-10-31"
   },
   "ChatGPTNextWeb/NextChat": {
     "status": "active",
-    "stars": 88927,
+    "stars": 88928,
     "pushed": "2026-10-20",
     "license": "MIT",
     "checked": "2026-10-31"
@@ -673,7 +673,7 @@
   },
   "infiniflow/ragflow": {
     "status": "active",
-    "stars": 93230,
+    "stars": 93231,
     "pushed": "2026-10-31",
     "license": "Apache-2.0",
     "checked": "2026-10-31"
