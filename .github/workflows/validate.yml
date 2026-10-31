@@ -6,6 +6,8 @@ on:
 
 env:
   MIN_STARS: 500
+  RISING_MIN_STARS: 100
+  RISING_MAX_AGE_DAYS: 365
 
 jobs:
   validate:

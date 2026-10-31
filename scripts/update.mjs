@@ -5,8 +5,9 @@ import { readFileSync, writeFileSync } from 'node:fs'
 const ACTIVE_DAYS = Number(process.env.ACTIVE_DAYS)
 const SLOW_DAYS = Number(process.env.SLOW_DAYS)
 const MIN_STARS = Number(process.env.MIN_STARS)
-if (![ACTIVE_DAYS, SLOW_DAYS, MIN_STARS].every(Number.isFinite)) {
-  throw new Error('Set ACTIVE_DAYS, SLOW_DAYS and MIN_STARS (see .env.example)')
+const RISING_MAX_AGE_DAYS = Number(process.env.RISING_MAX_AGE_DAYS)
+if (![ACTIVE_DAYS, SLOW_DAYS, MIN_STARS, RISING_MAX_AGE_DAYS].every(Number.isFinite)) {
+  throw new Error('Set ACTIVE_DAYS, SLOW_DAYS, MIN_STARS and RISING_MAX_AGE_DAYS (see .env.example)')
 }
 const token = process.env.GITHUB_TOKEN
 const projects = JSON.parse(readFileSync('data/projects.json', 'utf8'))
@@ -38,6 +39,7 @@ async function fetchHealth(repo) {
     status,
     stars: r.stargazers_count,
     pushed: r.pushed_at.slice(0, 10),
+    created: r.created_at.slice(0, 10),
     license: r.license?.spdx_id ?? 'NOASSERTION',
     checked: new Date().toISOString().slice(0, 10),
   }
@@ -63,10 +65,17 @@ const item = (p) =>
 const slug = (c) => c.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/ /g, '-')
 const byName = (a, b) => a.name.localeCompare(b.name)
 
-const alive = projects.filter((p) => ['active', 'slow', 'unknown'].includes(health[p.repo].status))
-const dead = projects.filter((p) => !alive.includes(p))
-const open = alive.filter((p) => p.tier !== 'source-available')
-const sourceAvail = alive.filter((p) => p.tier === 'source-available')
+const healthy = projects.filter((p) => ['active', 'slow', 'unknown'].includes(health[p.repo].status))
+// A rising project graduates to its category at MIN_STARS, and retires if it
+// is still under the floor once it is older than RISING_MAX_AGE_DAYS.
+const ageDays = (p) => (Date.now() - new Date(health[p.repo].created ?? Date.now()).getTime()) / 86400000
+const stillRising = (p) => p.rising && (health[p.repo].stars ?? 0) < MIN_STARS
+const retired = healthy.filter((p) => stillRising(p) && ageDays(p) > RISING_MAX_AGE_DAYS)
+const alive = healthy.filter((p) => !retired.includes(p))
+const dead = projects.filter((p) => !healthy.includes(p))
+const rising = alive.filter(stillRising)
+const open = alive.filter((p) => p.tier !== 'source-available' && !rising.includes(p))
+const sourceAvail = alive.filter((p) => p.tier === 'source-available' && !rising.includes(p))
 const cats = [...new Set(open.map((p) => p.category))].sort()
 
 const totalStars = alive.reduce((n, p) => n + (health[p.repo].stars ?? 0), 0)
@@ -80,17 +89,20 @@ let out = `# Awesome Self-Hosted AI [![Awesome](https://awesome.re/badge.svg)](h
 
 ${alive.length} projects across local LLMs, chat interfaces, agents, MCP servers, RAG, speech and image generation. A weekly job checks every project against the GitHub API, and anything archived, deleted or silent for over a year moves to [UNMAINTAINED.md](UNMAINTAINED.md).
 
-**${alive.length}** projects | **${activeCount}** active in the last ${ACTIVE_DAYS} days | **${fmt(totalStars)}** combined stars | **${dead.length}** unmaintained | refreshed ${today}
+**${alive.length}** projects | **${activeCount}** active in the last ${ACTIVE_DAYS} days | **${fmt(totalStars)}** combined stars | **${dead.length + retired.length}** unmaintained | refreshed ${today}
 
 See the [live health table](LIVE.md) for stars, last push and license per project.
 
 ## Contents
 
-${cats.map((c) => `- [${c}](#${slug(c)}) (${count(c)})`).join('\n')}${sourceAvail.length ? `\n- [Source-Available](#source-available) (${sourceAvail.length})` : ''}
+${cats.map((c) => `- [${c}](#${slug(c)}) (${count(c)})`).join('\n')}${rising.length ? `\n- [Rising](#rising) (${rising.length})` : ''}${sourceAvail.length ? `\n- [Source-Available](#source-available) (${sourceAvail.length})` : ''}
 
 `
 for (const c of cats) {
   out += `## ${c}\n\n${open.filter((p) => p.category === c).sort(byName).map(item).join('\n')}\n\n`
+}
+if (rising.length) {
+  out += `## Rising\n\nNew projects under ${MIN_STARS} stars that are worth watching. They move to their category at ${MIN_STARS} stars.\n\n${rising.sort(byName).map((p) => `${item(p)} (${p.category})`).join('\n')}\n\n`
 }
 if (sourceAvail.length) {
   out += `## Source-Available\n\nWidely used and self-hostable, but the license adds terms beyond a standard open-source license. Check them before commercial use.\n\n${sourceAvail.sort(byName).map(item).join('\n')}\n\n`
@@ -112,10 +124,15 @@ let live = `# Live Health Table\n\nRefreshed ${today} by the weekly job. Status 
 for (const c of cats) {
   live += `## ${c}\n\n${tableHead}\n${open.filter((p) => p.category === c).sort(byName).map(trow).join('\n')}\n\n`
 }
+if (rising.length) live += `## Rising\n\n${tableHead}\n${rising.sort(byName).map(trow).join('\n')}\n\n`
 if (sourceAvail.length) live += `## Source-Available\n\n${tableHead}\n${sourceAvail.sort(byName).map(trow).join('\n')}\n`
 writeFileSync('LIVE.md', live)
 
 let un = `# Unmaintained\n\nProjects that were archived, deleted or silent for over ${SLOW_DAYS} days. They return to the main list on the next weekly refresh if they become active again.\n\n`
-un += dead.length ? dead.sort(byName).map((p) => `- [${p.name}](https://github.com/${p.repo}) - ${sentence(p.description)} (${health[p.repo].status}, last push ${health[p.repo].pushed ?? 'unknown'})`).join('\n') + '\n' : '_Nothing here yet._\n'
+const lines = [
+  ...dead.map((p) => `- [${p.name}](https://github.com/${p.repo}) - ${sentence(p.description)} (${health[p.repo].status}, last push ${health[p.repo].pushed ?? 'unknown'})`),
+  ...retired.map((p) => `- [${p.name}](https://github.com/${p.repo}) - ${sentence(p.description)} (left Rising: still under ${MIN_STARS} stars after ${RISING_MAX_AGE_DAYS} days)`),
+]
+un += lines.length ? lines.sort().join('\n') + '\n' : '_Nothing here yet._\n'
 writeFileSync('UNMAINTAINED.md', un)
-console.log(`refreshed ${projects.length} projects, ${dead.length} unmaintained`)
+console.log(`refreshed ${projects.length} projects, ${dead.length + retired.length} unmaintained, ${rising.length} rising`)
