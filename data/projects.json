@@ -433,12 +433,6 @@
     "description": "Code review CLI that combines deterministic analysis passes with LLM agents."
   },
   {
-    "name": "opencode",
-    "repo": "sst/opencode",
-    "category": "Coding Assistants",
-    "description": "Terminal coding agent that works with whichever model provider you configure."
-  },
-  {
     "name": "OpenCode",
     "repo": "anomalyco/opencode",
     "category": "Coding Assistants",
