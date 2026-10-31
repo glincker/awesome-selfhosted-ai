@@ -2,6 +2,8 @@
 import { readFileSync } from 'node:fs'
 
 const MIN_STARS = Number(process.env.MIN_STARS)
+const RISING_MIN_STARS = Number(process.env.RISING_MIN_STARS)
+const RISING_MAX_AGE_DAYS = Number(process.env.RISING_MAX_AGE_DAYS)
 const projects = JSON.parse(readFileSync('data/projects.json', 'utf8'))
 const errors = []
 const seen = new Set()
@@ -14,6 +16,7 @@ for (const p of projects) {
   if (!/^[\w.-]+\/[\w.-]+$/.test(p.repo ?? '')) errors.push(`${id}: repo must be owner/name`)
   if (seen.has(p.repo?.toLowerCase())) errors.push(`${id}: duplicate`)
   seen.add(p.repo?.toLowerCase())
+  if (p.rising !== undefined && p.rising !== true) errors.push(`${id}: rising must be true`)
   if (p.tier !== undefined && p.tier !== 'source-available') errors.push(`${id}: unknown tier`)
   if (p.tier === 'source-available' && !p.license_note) errors.push(`${id}: license_note required`)
   if ((p.description ?? '').length > 120) errors.push(`${id}: description over 120 chars`)
@@ -29,8 +32,14 @@ if (Number.isFinite(MIN_STARS)) {
     })
     if (!res.ok) { errors.push(`${repo}: not found`); continue }
     const r = await res.json()
+    const entry = projects.find((x) => x.repo.toLowerCase() === repo.toLowerCase())
+    const floor = entry?.rising ? RISING_MIN_STARS : MIN_STARS
     if (r.archived) errors.push(`${repo}: archived`)
-    if (r.stargazers_count < MIN_STARS) errors.push(`${repo}: under ${MIN_STARS} stars`)
+    if (r.stargazers_count < floor) errors.push(`${repo}: under ${floor} stars`)
+    if (entry?.rising) {
+      const age = (Date.now() - new Date(r.created_at).getTime()) / 86400000
+      if (age > RISING_MAX_AGE_DAYS) errors.push(`${repo}: too old for Rising (over ${RISING_MAX_AGE_DAYS} days)`)
+    }
   }
 }
 

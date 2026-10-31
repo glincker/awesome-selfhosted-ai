@@ -6,9 +6,10 @@ The list is generated. Edit `data/projects.json`, never `README.md`.
 
 - Open source licence, and you can run it on your own hardware or server. Hosted-only products are out.
 - Not archived, and pushed to within the last 90 days.
-- At least 500 stars, or a clear reason it is new and worth watching (say so in the PR).
+- At least 500 stars, or at least 100 stars and under a year old (the Rising lane).
 - Working install instructions (Docker image, compose file or a documented binary).
 - One project per pull request.
+- New project? Add `"rising": true` to the entry. Rising projects need at least 100 stars, must be under a year old, and are listed in their own section until they reach 500 stars, when they move to their category on their own. They leave the list if they are still under 500 stars after a year.
 - Your own project is welcome, but say so in the PR.
 
 ## How to add one

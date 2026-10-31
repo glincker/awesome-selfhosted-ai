@@ -17,6 +17,8 @@ env:
   ACTIVE_DAYS: 90
   SLOW_DAYS: 365
   MIN_STARS: 500
+  RISING_MIN_STARS: 100
+  RISING_MAX_AGE_DAYS: 365
 
 jobs:
   refresh:
