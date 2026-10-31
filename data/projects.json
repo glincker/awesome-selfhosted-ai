@@ -1,11 +1,23 @@
 [
   {
+    "name": "Agno",
+    "repo": "agno-agi/agno",
+    "category": "Agents and Automation",
+    "description": "Python framework for building multi-agent systems with memory, knowledge, and a runtime for agent apps."
+  },
+  {
     "name": "AutoGPT",
     "repo": "Significant-Gravitas/AutoGPT",
     "category": "Agents and Automation",
     "description": "Platform for building, running and monitoring autonomous AI agents with a visual workflow builder.",
     "tier": "source-available",
     "license_note": "Polyform Shield for platform, MIT elsewhere"
+  },
+  {
+    "name": "Botpress",
+    "repo": "botpress/botpress",
+    "category": "Agents and Automation",
+    "description": "Platform for building and self-hosting conversational AI chatbots and agents with a visual flow builder."
   },
   {
     "name": "browser-use",
@@ -42,6 +54,12 @@
     "license_note": "Modified Apache-2.0 with extra terms"
   },
   {
+    "name": "Langflow",
+    "repo": "langflow-ai/langflow",
+    "category": "Agents and Automation",
+    "description": "Visual builder for AI agents and RAG workflows in Python, with each flow exposed as an API."
+  },
+  {
     "name": "LangGraph",
     "repo": "langchain-ai/langgraph",
     "category": "Agents and Automation",
@@ -68,6 +86,12 @@
     "license_note": "Sustainable Use License"
   },
   {
+    "name": "Open Interpreter",
+    "repo": "OpenInterpreter/open-interpreter",
+    "category": "Agents and Automation",
+    "description": "Natural-language interface that lets an LLM run code and shell commands on your own computer."
+  },
+  {
     "name": "OpenManus",
     "repo": "FoundationAgents/OpenManus",
     "category": "Agents and Automation",
@@ -78,6 +102,24 @@
     "repo": "pydantic/pydantic-ai",
     "category": "Agents and Automation",
     "description": "Type-safe Python agent framework with model-agnostic tool calling and structured outputs."
+  },
+  {
+    "name": "Sim",
+    "repo": "simstudioai/sim",
+    "category": "Agents and Automation",
+    "description": "Visual workflow builder for agents and LLM pipelines that can be self-hosted with Docker."
+  },
+  {
+    "name": "Trigger.dev",
+    "repo": "triggerdotdev/trigger.dev",
+    "category": "Agents and Automation",
+    "description": "TypeScript background job framework for long-running AI tasks with retries and run monitoring."
+  },
+  {
+    "name": "Zep",
+    "repo": "getzep/zep",
+    "category": "Agents and Automation",
+    "description": "Memory service that stores and retrieves facts and conversation history for AI agents over time."
   },
   {
     "name": "AnythingLLM",
@@ -96,6 +138,12 @@
     "repo": "chatboxai/chatbox",
     "category": "Chat Interfaces",
     "description": "Cross-platform desktop and web client for chatting with local and remote LLM APIs."
+  },
+  {
+    "name": "Cherry Studio",
+    "repo": "CherryHQ/cherry-studio",
+    "category": "Chat Interfaces",
+    "description": "Desktop client for chatting with many LLM providers, with knowledge bases and local document search."
   },
   {
     "name": "LibreChat",
@@ -124,6 +172,12 @@
     "description": "Self-hosted web interface for chatting with local and cloud LLMs, with RAG, tools and user management.",
     "tier": "source-available",
     "license_note": "Open WebUI License"
+  },
+  {
+    "name": "Perplexica",
+    "repo": "ItzCrazyKns/Perplexica",
+    "category": "Chat Interfaces",
+    "description": "AI answering search engine that cites web sources and runs with local or cloud models."
   },
   {
     "name": "text-generation-webui",
@@ -180,6 +234,12 @@
     "repo": "QwenLM/qwen-code",
     "category": "Coding Assistants",
     "description": "Terminal coding agent tuned for Qwen models and compatible with other OpenAI-style APIs."
+  },
+  {
+    "name": "SWE-agent",
+    "repo": "SWE-agent/SWE-agent",
+    "category": "Coding Assistants",
+    "description": "Software engineering agent that resolves GitHub issues by editing code and running commands in a container."
   },
   {
     "name": "AI Toolkit",
@@ -254,6 +314,12 @@
     "description": "Peer-to-peer system that pools devices on a local network to run one larger model."
   },
   {
+    "name": "Llama Stack",
+    "repo": "meta-llama/llama-stack",
+    "category": "LLM Runtimes and Inference",
+    "description": "Server with unified APIs for inference, RAG, agents, and safety that runs Llama and other models."
+  },
+  {
     "name": "llama-swap",
     "repo": "mostlygeek/llama-swap",
     "category": "LLM Runtimes and Inference",
@@ -288,6 +354,18 @@
     "repo": "sgl-project/sglang",
     "category": "LLM Runtimes and Inference",
     "description": "Serving framework for LLMs and multimodal models with structured generation and prefix caching."
+  },
+  {
+    "name": "Triton Inference Server",
+    "repo": "triton-inference-server/server",
+    "category": "LLM Runtimes and Inference",
+    "description": "Model server that runs models from many frameworks on GPUs and CPUs with dynamic batching."
+  },
+  {
+    "name": "Unsloth",
+    "repo": "unslothai/unsloth",
+    "category": "LLM Runtimes and Inference",
+    "description": "Training toolkit that speeds up LoRA and full fine-tuning of open LLMs on your own GPUs."
   },
   {
     "name": "vLLM",
@@ -374,6 +452,12 @@
     "description": "AI model gateway that fronts many upstream providers behind one key with quotas and billing."
   },
   {
+    "name": "Argilla",
+    "repo": "argilla-io/argilla",
+    "category": "Observability and Evals",
+    "description": "Data annotation and feedback platform for curating datasets and reviewing LLM outputs by hand."
+  },
+  {
     "name": "DeepEval",
     "repo": "confident-ai/deepeval",
     "category": "Observability and Evals",
@@ -390,6 +474,12 @@
     "repo": "UKGovernmentBEIS/inspect_ai",
     "category": "Observability and Evals",
     "description": "Framework for evaluating LLMs and agents with solvers, scorers, and sandboxed tool execution."
+  },
+  {
+    "name": "LangWatch",
+    "repo": "langwatch/langwatch",
+    "category": "Observability and Evals",
+    "description": "LLM monitoring and evaluation platform with tracing, datasets, and prompt management for AI apps."
   },
   {
     "name": "LM Evaluation Harness",
@@ -450,6 +540,12 @@
     "license_note": "Apache-2.0 with additional conditions"
   },
   {
+    "name": "Graphiti",
+    "repo": "getzep/graphiti",
+    "category": "RAG and Vector Databases",
+    "description": "Framework for building temporal knowledge graphs from agent and user data for retrieval."
+  },
+  {
     "name": "Haystack",
     "repo": "deepset-ai/haystack",
     "category": "RAG and Vector Databases",
@@ -474,10 +570,22 @@
     "description": "Data framework that connects private documents to LLMs through indexes and retrievers."
   },
   {
+    "name": "MaxKB",
+    "repo": "1Panel-dev/MaxKB",
+    "category": "RAG and Vector Databases",
+    "description": "Knowledge base and agent platform for RAG chatbots and workflow automation over your own documents."
+  },
+  {
     "name": "Milvus",
     "repo": "milvus-io/milvus",
     "category": "RAG and Vector Databases",
     "description": "Distributed vector database built for large-scale embedding search with hybrid filtering."
+  },
+  {
+    "name": "MindsDB",
+    "repo": "mindsdb/mindsdb",
+    "category": "RAG and Vector Databases",
+    "description": "Federated SQL layer that connects databases and apps to AI models for querying and in-database ML."
   },
   {
     "name": "PrivateGPT",
