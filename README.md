@@ -2,9 +2,9 @@
 
 > Open-source AI you can run on your own hardware or server.
 
-278 projects across local LLMs, chat interfaces, agents, MCP servers, RAG, speech and image generation. A weekly job checks every project against the GitHub API, and anything archived, deleted or silent for over a year moves to [UNMAINTAINED.md](UNMAINTAINED.md).
+303 projects across local LLMs, chat interfaces, agents, MCP servers, RAG, speech and image generation. A weekly job checks every project against the GitHub API, and anything archived, deleted or silent for over a year moves to [UNMAINTAINED.md](UNMAINTAINED.md).
 
-**278** projects | **277** active in the last 90 days | **10.5M** combined stars | **0** unmaintained | refreshed 2026-10-31
+**303** projects | **302** active in the last 90 days | **10.5M** combined stars | **0** unmaintained | refreshed 2026-10-31
 
 See the [live health table](LIVE.md) for stars, last push and license per project.
 
@@ -26,6 +26,7 @@ See the [live health table](LIVE.md) for stars, last push and license per projec
 - [Speech and Audio](#speech-and-audio) (15)
 - [Vision and Multimodal](#vision-and-multimodal) (5)
 - [Voice Agents](#voice-agents) (5)
+- [Rising](#rising) (25)
 - [Source-Available](#source-available) (24)
 
 ## Agents and Automation
@@ -329,6 +330,36 @@ See the [live health table](LIVE.md) for stars, last push and license per projec
 - [Pipecat](https://github.com/pipecat-ai/pipecat) - Python framework for real-time voice and multimodal conversational agents with pluggable services.
 - [Speech to Speech](https://github.com/huggingface/speech-to-speech) - Modular voice agent pipeline chaining voice activity detection, speech recognition, LLM, and synthesis.
 - [VoiceMem](https://github.com/xzf-thu/VoiceMem) - Memory infrastructure for voice agents that keeps conversation context across sessions.
+
+## Rising
+
+New projects under 500 stars that are worth watching. They move to their category at 500 stars.
+
+- [Agentrove](https://github.com/Mng-dev-ai/agentrove) - Self-hosted workspace to run and orchestrate several AI coding agent CLIs in one place. (Coding Assistants)
+- [Basjoo](https://github.com/haoyiyin/basjoo) - Self-hosted AI customer support platform with per-knowledge-base RAG on Qdrant. (RAG and Vector Databases)
+- [flowcat](https://github.com/AreevAI/flowcat) - Self-hosted Rust runtime for real-time voice agents, shipped as a single binary. (Voice Agents)
+- [franken_ocr](https://github.com/Dicklesworthstone/franken_ocr) - CPU-only OCR engine written in Rust that runs the Unlimited-OCR vision-language model. (MIT with OpenAI and Anthropic rider) (Document AI and OCR)
+- [fxhoudinimcp](https://github.com/healkeiser/fxhoudinimcp) - MCP server that exposes SideFX Houdini scene control to AI agents. (MCP Servers and Gateways)
+- [Guaardvark](https://github.com/guaardvark/guaardvark) - Self-hosted AI studio on your own GPU for chatting with your files and running agents. (Agents and Automation)
+- [gyotaku](https://github.com/xevrion/gyotaku) - Offline Linux app that searches your screenshots by the text inside them. (Search and Knowledge)
+- [keirouter](https://github.com/mydisha/keirouter) - Self-hostable AI gateway that proxies requests to multiple model providers. (Model Gateways and Routers)
+- [kensaku](https://github.com/yjid/kensaku) - Local search across documents, code and screenshots, indexed on your own machine. (Search and Knowledge)
+- [Kindly Web Search MCP Server](https://github.com/Shelpuk-AI-Technology-Consulting/kindly-web-search-mcp-server) - MCP server for web search and robust page content retrieval in AI coding tools. (MCP Servers and Gateways)
+- [llamastash](https://github.com/llamastash/llamastash) - Terminal-native orchestrator that launches and manages local LLM engines and models with low overhead. (LLM Runtimes and Inference)
+- [llmserve](https://github.com/AlexsJones/llmserve) - Terminal UI that picks a local model and backend, then starts a server for it. (LLM Runtimes and Inference)
+- [Lumiverse](https://github.com/prolix-oc/Lumiverse) - Self-hosted AI chat frontend with an extension ecosystem and a focus on performance. (Lumiverse Community License 2.2, not OSI) (Chat Interfaces)
+- [Mira](https://github.com/miracodeai/mira) - Self-hosted AI code reviewer with indexed pull request reviews and walkthroughs. (Coding Assistants)
+- [mlxtop](https://github.com/maximpri/mlxtop) - Terminal monitor for local LLMs showing memory, GPU use and tokens per second. (Observability and Evals)
+- [Myna](https://github.com/canonical/myna) - Lightweight speech-to-text desktop application for Ubuntu. (Speech and Audio)
+- [Nyro](https://github.com/nyroway/nyro) - Self-hosted AI gateway that lets coding CLIs and SDKs call any model provider. (Model Gateways and Routers)
+- [openasr](https://github.com/QuintinShaw/openasr) - Local-first speech-to-text command line tool that runs without cloud services or telemetry. (Speech and Audio)
+- [PMetal](https://github.com/Epistates/pmetal) - Apple Silicon framework for local LLM inference and LoRA or QLoRA fine-tuning. (Fine-Tuning and Training)
+- [ScribeCrate](https://github.com/hwdsl2/scribecrate) - Self-hosted Whisper speech-to-text server powered by faster-whisper. (Speech and Audio)
+- [shodh-memory](https://github.com/varun29ankuS/shodh-memory) - Local, LLM-free memory engine for AI agents, packaged as one offline Rust binary. (Agents and Automation)
+- [thunderbird-mcp](https://github.com/TKasperczyk/thunderbird-mcp) - MCP server that gives AI assistants access to Thunderbird email, contacts and calendar. (MCP Servers and Gateways)
+- [VoicEra](https://github.com/COSS-India/VoicEra) - Voice AI building block with telephony integration and real-time speech processing. (Voice Agents)
+- [YoloRouter](https://github.com/yolorouter/yolorouter) - Self-hosted OpenAI-compatible LLM gateway with provider failover and key rotation. (Model Gateways and Routers)
+- [zx-bench](https://github.com/suncityldp/zx-bench) - Local LLM benchmarking platform with versioned datasets and deterministic scoring. (Observability and Evals)
 
 ## Source-Available
 

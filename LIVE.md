@@ -336,6 +336,36 @@ Refreshed 2026-10-31 by the weekly job. Status is `active` (pushed within 90 day
 | <img src="https://github.com/huggingface.png?size=40" width="20" height="20" alt=""> | [Speech to Speech](https://github.com/huggingface/speech-to-speech) | 14k | 2026-10-30 | Apache-2.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
 | <img src="https://github.com/xzf-thu.png?size=40" width="20" height="20" alt=""> | [VoiceMem](https://github.com/xzf-thu/VoiceMem) | 2.8k | 2026-09-14 | Apache-2.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
 
+## Rising
+
+| | Project | Stars | Last push | License | Status |
+| :-: | --- | ---: | --- | --- | --- |
+| <img src="https://github.com/Mng-dev-ai.png?size=40" width="20" height="20" alt=""> | [Agentrove](https://github.com/Mng-dev-ai/agentrove) | 340 | 2026-10-31 | Apache-2.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/haoyiyin.png?size=40" width="20" height="20" alt=""> | [Basjoo](https://github.com/haoyiyin/basjoo) | 164 | 2026-10-30 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/AreevAI.png?size=40" width="20" height="20" alt=""> | [flowcat](https://github.com/AreevAI/flowcat) | 127 | 2026-10-19 | Apache-2.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/Dicklesworthstone.png?size=40" width="20" height="20" alt=""> | [franken_ocr](https://github.com/Dicklesworthstone/franken_ocr) | 345 | 2026-10-31 | MIT with OpenAI and Anthropic rider | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/healkeiser.png?size=40" width="20" height="20" alt=""> | [fxhoudinimcp](https://github.com/healkeiser/fxhoudinimcp) | 385 | 2026-10-20 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/guaardvark.png?size=40" width="20" height="20" alt=""> | [Guaardvark](https://github.com/guaardvark/guaardvark) | 294 | 2026-10-30 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/xevrion.png?size=40" width="20" height="20" alt=""> | [gyotaku](https://github.com/xevrion/gyotaku) | 375 | 2026-10-30 | GPL-3.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/mydisha.png?size=40" width="20" height="20" alt=""> | [keirouter](https://github.com/mydisha/keirouter) | 156 | 2026-10-30 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/yjid.png?size=40" width="20" height="20" alt=""> | [kensaku](https://github.com/yjid/kensaku) | 315 | 2026-10-30 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/Shelpuk-AI-Technology-Consulting.png?size=40" width="20" height="20" alt=""> | [Kindly Web Search MCP Server](https://github.com/Shelpuk-AI-Technology-Consulting/kindly-web-search-mcp-server) | 402 | 2026-10-19 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/llamastash.png?size=40" width="20" height="20" alt=""> | [llamastash](https://github.com/llamastash/llamastash) | 280 | 2026-10-30 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/AlexsJones.png?size=40" width="20" height="20" alt=""> | [llmserve](https://github.com/AlexsJones/llmserve) | 412 | 2026-10-30 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/prolix-oc.png?size=40" width="20" height="20" alt=""> | [Lumiverse](https://github.com/prolix-oc/Lumiverse) | 199 | 2026-10-30 | Lumiverse Community License 2.2, not OSI | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/miracodeai.png?size=40" width="20" height="20" alt=""> | [Mira](https://github.com/miracodeai/mira) | 383 | 2026-10-30 | Apache-2.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/maximpri.png?size=40" width="20" height="20" alt=""> | [mlxtop](https://github.com/maximpri/mlxtop) | 141 | 2026-10-31 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/canonical.png?size=40" width="20" height="20" alt=""> | [Myna](https://github.com/canonical/myna) | 212 | 2026-10-29 | AGPL-3.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/nyroway.png?size=40" width="20" height="20" alt=""> | [Nyro](https://github.com/nyroway/nyro) | 198 | 2026-10-16 | Apache-2.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/QuintinShaw.png?size=40" width="20" height="20" alt=""> | [openasr](https://github.com/QuintinShaw/openasr) | 291 | 2026-10-30 | Apache-2.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/Epistates.png?size=40" width="20" height="20" alt=""> | [PMetal](https://github.com/Epistates/pmetal) | 331 | 2026-10-29 | NOASSERTION | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/hwdsl2.png?size=40" width="20" height="20" alt=""> | [ScribeCrate](https://github.com/hwdsl2/scribecrate) | 119 | 2026-10-31 | NOASSERTION | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/varun29ankuS.png?size=40" width="20" height="20" alt=""> | [shodh-memory](https://github.com/varun29ankuS/shodh-memory) | 316 | 2026-10-26 | Apache-2.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/TKasperczyk.png?size=40" width="20" height="20" alt=""> | [thunderbird-mcp](https://github.com/TKasperczyk/thunderbird-mcp) | 415 | 2026-10-23 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/COSS-India.png?size=40" width="20" height="20" alt=""> | [VoicEra](https://github.com/COSS-India/VoicEra) | 316 | 2026-10-30 | Apache-2.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/yolorouter.png?size=40" width="20" height="20" alt=""> | [YoloRouter](https://github.com/yolorouter/yolorouter) | 220 | 2026-10-28 | Apache-2.0 | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+| <img src="https://github.com/suncityldp.png?size=40" width="20" height="20" alt=""> | [zx-bench](https://github.com/suncityldp/zx-bench) | 178 | 2026-10-28 | MIT | ![active](https://img.shields.io/badge/active-brightgreen?style=flat-square) |
+
 ## Source-Available
 
 | | Project | Stars | Last push | License | Status |
