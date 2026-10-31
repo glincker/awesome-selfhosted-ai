@@ -1,5 +1,17 @@
 [
   {
+    "name": "Agent Development Kit",
+    "repo": "google/adk-python",
+    "category": "Agents and Automation",
+    "description": "Python toolkit for building and evaluating LLM agents, with multi-model support."
+  },
+  {
+    "name": "AgentScope",
+    "repo": "agentscope-ai/agentscope",
+    "category": "Agents and Automation",
+    "description": "Multi-agent framework with tracing, memory and tool use for building and deploying agents."
+  },
+  {
     "name": "Agno",
     "repo": "agno-agi/agno",
     "category": "Agents and Automation",
@@ -54,6 +66,12 @@
     "license_note": "Modified Apache-2.0 with extra terms"
   },
   {
+    "name": "Forge",
+    "repo": "antoinezambelli/forge",
+    "category": "Agents and Automation",
+    "description": "Python framework for tool calling and multi-step workflows on self-hosted LLMs."
+  },
+  {
     "name": "Langflow",
     "repo": "langflow-ai/langflow",
     "category": "Agents and Automation",
@@ -90,6 +108,12 @@
     "repo": "OpenInterpreter/open-interpreter",
     "category": "Agents and Automation",
     "description": "Natural-language interface that lets an LLM run code and shell commands on your own computer."
+  },
+  {
+    "name": "open-multi-agent",
+    "repo": "open-multi-agent/open-multi-agent",
+    "category": "Agents and Automation",
+    "description": "Self-hosted TypeScript agent runtime with durable approvals and verifiable run records."
   },
   {
     "name": "OpenManus",
@@ -144,6 +168,12 @@
     "repo": "CherryHQ/cherry-studio",
     "category": "Chat Interfaces",
     "description": "Desktop client for chatting with many LLM providers, with knowledge bases and local document search."
+  },
+  {
+    "name": "Jan",
+    "repo": "janhq/jan",
+    "category": "Chat Interfaces",
+    "description": "Open-source desktop app for running local models and chatting with cloud providers."
   },
   {
     "name": "LibreChat",
@@ -212,10 +242,22 @@
     "license_note": "FSL-1.1-MIT (converts to MIT after two years)"
   },
   {
+    "name": "Gemini CLI",
+    "repo": "google-gemini/gemini-cli",
+    "category": "Coding Assistants",
+    "description": "Open-source terminal agent for coding and shell tasks, built on Google Gemini models."
+  },
+  {
     "name": "goose",
     "repo": "block/goose",
     "category": "Coding Assistants",
     "description": "On-machine coding agent that runs shell, file, and extension tools with any supported model."
+  },
+  {
+    "name": "Kilo Code",
+    "repo": "Kilo-Org/kilocode",
+    "category": "Coding Assistants",
+    "description": "Open-source coding agent for VS Code and the terminal, with bring-your-own model keys."
   },
   {
     "name": "opencode",
@@ -240,6 +282,86 @@
     "repo": "SWE-agent/SWE-agent",
     "category": "Coding Assistants",
     "description": "Software engineering agent that resolves GitHub issues by editing code and running commands in a container."
+  },
+  {
+    "name": "Docling",
+    "repo": "docling-project/docling",
+    "category": "Document AI and OCR",
+    "description": "Parses PDF, DOCX, PPTX and HTML into structured Markdown or JSON, with OCR and table recovery."
+  },
+  {
+    "name": "GLM-OCR",
+    "repo": "zai-org/GLM-OCR",
+    "category": "Document AI and OCR",
+    "description": "Open OCR model and code from Z.ai for text, table and formula recognition in document images."
+  },
+  {
+    "name": "kordoc",
+    "repo": "chrisryugj/kordoc",
+    "category": "Document AI and OCR",
+    "description": "Converts HWP, HWPX, PDF and Office files to Markdown, with a CLI and an MCP server."
+  },
+  {
+    "name": "LiteParse",
+    "repo": "run-llama/liteparse",
+    "category": "Document AI and OCR",
+    "description": "Fast, local, model-free document parser for extracting text and layout from documents."
+  },
+  {
+    "name": "MinerU",
+    "repo": "opendatalab/MinerU",
+    "category": "Document AI and OCR",
+    "description": "Converts PDFs into Markdown and JSON with layout, table and formula recognition, on local GPUs or CPUs.",
+    "tier": "source-available",
+    "license_note": "Apache-2.0 plus commercial-use terms in LICENSE"
+  },
+  {
+    "name": "Axolotl",
+    "repo": "axolotl-ai-cloud/axolotl",
+    "category": "Fine-Tuning and Training",
+    "description": "Config-driven toolkit for full and LoRA fine-tuning and preference training on your own GPUs."
+  },
+  {
+    "name": "LLaMA-Factory",
+    "repo": "hiyouga/LlamaFactory",
+    "category": "Fine-Tuning and Training",
+    "description": "Unified framework for fine-tuning 100+ LLMs and VLMs with LoRA, QLoRA and RLHF methods."
+  },
+  {
+    "name": "Soup",
+    "repo": "MakazhanAlpamys/Soup",
+    "category": "Fine-Tuning and Training",
+    "description": "Fine-tunes LLMs from one YAML file, with layer streaming for GPUs with limited memory."
+  },
+  {
+    "name": "TRL",
+    "repo": "huggingface/trl",
+    "category": "Fine-Tuning and Training",
+    "description": "Library for post-training language models with SFT, DPO and GRPO on top of Transformers."
+  },
+  {
+    "name": "AionsHome",
+    "repo": "death34018-hue/AionsHome",
+    "category": "Home and Personal AI",
+    "description": "Self-hosted AI companion with long-term memory, voice interaction and camera-based vision."
+  },
+  {
+    "name": "Home Assistant",
+    "repo": "home-assistant/core",
+    "category": "Home and Personal AI",
+    "description": "Home automation platform with local voice assistants and LLM conversation agents."
+  },
+  {
+    "name": "Octop",
+    "repo": "TencentCloud/Octop",
+    "category": "Home and Personal AI",
+    "description": "Self-hosted AI assistant for several users, running multiple agents side by side."
+  },
+  {
+    "name": "OGAM",
+    "repo": "off-grid-ai/OGAM",
+    "category": "Home and Personal AI",
+    "description": "Offline AI app for phone and Mac that chats, sees, speaks and generates images with local models."
   },
   {
     "name": "AI Toolkit",
@@ -280,6 +402,12 @@
     "description": "Creative image generation studio with a browser UI, canvas editing, and model management."
   },
   {
+    "name": "iris.c",
+    "repo": "antirez/iris.c",
+    "category": "Image and Video Generation",
+    "description": "Pure C inference engine for the FLUX.2 image generation model."
+  },
+  {
     "name": "LTX-2",
     "repo": "Lightricks/LTX-2",
     "category": "Image and Video Generation",
@@ -292,6 +420,20 @@
     "repo": "genmoai/mochi",
     "category": "Image and Video Generation",
     "description": "Open text-to-video model released with inference code for running on local GPUs."
+  },
+  {
+    "name": "MOSS-Image",
+    "repo": "OpenMOSS/MOSS-Image",
+    "category": "Image and Video Generation",
+    "description": "Official code for MOSS-Image, a 5B-parameter diffusion transformer for high-quality image generation."
+  },
+  {
+    "name": "Qwen-Image-2.1",
+    "repo": "QwenLM/Qwen-Image-2.1",
+    "category": "Image and Video Generation",
+    "description": "Open image generation model from the Qwen team, distributed under the Qwen research license.",
+    "tier": "source-available",
+    "license_note": "Qwen Research License Agreement"
   },
   {
     "name": "sd-scripts",
@@ -308,10 +450,28 @@
     "license_note": "WanGP Community License 2.0"
   },
   {
+    "name": "ExLlamaV3",
+    "repo": "turboderp-org/exllamav3",
+    "category": "LLM Runtimes and Inference",
+    "description": "Inference library for running quantized LLMs efficiently on consumer NVIDIA GPUs."
+  },
+  {
     "name": "exo",
     "repo": "exo-explore/exo",
     "category": "LLM Runtimes and Inference",
     "description": "Peer-to-peer system that pools devices on a local network to run one larger model."
+  },
+  {
+    "name": "KTransformers",
+    "repo": "kvcache-ai/ktransformers",
+    "category": "LLM Runtimes and Inference",
+    "description": "Inference framework that offloads MoE experts to the CPU so large models fit on modest GPUs."
+  },
+  {
+    "name": "Lemonade",
+    "repo": "lemonade-sdk/lemonade",
+    "category": "LLM Runtimes and Inference",
+    "description": "Local LLM server with an OpenAI-compatible API that uses GPU and NPU acceleration."
   },
   {
     "name": "Llama Stack",
@@ -332,16 +492,34 @@
     "description": "C and C++ inference engine for running GGUF models on CPUs and GPUs across many backends."
   },
   {
+    "name": "llamafile",
+    "repo": "mozilla-ai/llamafile",
+    "category": "LLM Runtimes and Inference",
+    "description": "Single-file executables that bundle a model with llama.cpp so it runs locally on most computers."
+  },
+  {
     "name": "LocalAI",
     "repo": "mudler/LocalAI",
     "category": "LLM Runtimes and Inference",
     "description": "OpenAI-compatible server that runs text, image, and audio models on local hardware."
   },
   {
+    "name": "mistral.rs",
+    "repo": "EricLBuehler/mistral.rs",
+    "category": "LLM Runtimes and Inference",
+    "description": "Rust LLM inference engine with an OpenAI-compatible server and quantization support."
+  },
+  {
     "name": "MLC LLM",
     "repo": "mlc-ai/mlc-llm",
     "category": "LLM Runtimes and Inference",
     "description": "Compiler-based LLM deployment that runs models natively on phones, browsers, and desktop GPUs."
+  },
+  {
+    "name": "mlx-lm",
+    "repo": "ml-explore/mlx-lm",
+    "category": "LLM Runtimes and Inference",
+    "description": "Run and fine-tune language models on Apple silicon with the MLX framework."
   },
   {
     "name": "Ollama",
@@ -380,6 +558,18 @@
     "description": "Model serving platform that exposes LLM, embedding, and speech models through one API."
   },
   {
+    "name": "agentgateway",
+    "repo": "agentgateway/agentgateway",
+    "category": "MCP Servers and Gateways",
+    "description": "Rust proxy for agent traffic that supports MCP and A2A protocols."
+  },
+  {
+    "name": "AnythingMCP",
+    "repo": "HelpCode-ai/anythingmcp",
+    "category": "MCP Servers and Gateways",
+    "description": "Turns REST, GraphQL, SOAP and SQL APIs into MCP tools behind one gateway."
+  },
+  {
     "name": "Chrome DevTools MCP",
     "repo": "ChromeDevTools/chrome-devtools-mcp",
     "category": "MCP Servers and Gateways",
@@ -390,6 +580,12 @@
     "repo": "docker/mcp-gateway",
     "category": "MCP Servers and Gateways",
     "description": "Runs MCP servers in isolated containers and exposes them to clients through one gateway."
+  },
+  {
+    "name": "FastMCP",
+    "repo": "PrefectHQ/fastmcp",
+    "category": "MCP Servers and Gateways",
+    "description": "Pythonic framework for building MCP servers and clients."
   },
   {
     "name": "GitHub MCP Server",
@@ -416,6 +612,12 @@
     "description": "Aggregates several MCP servers behind one endpoint with config-driven routing."
   },
   {
+    "name": "mcp-use",
+    "repo": "mcp-use/mcp-use",
+    "category": "MCP Servers and Gateways",
+    "description": "Framework for building MCP clients and agents, with Python and TypeScript SDKs."
+  },
+  {
     "name": "Playwright MCP",
     "repo": "microsoft/playwright-mcp",
     "category": "MCP Servers and Gateways",
@@ -434,10 +636,22 @@
     "description": "Edge proxy built on Envoy that routes and guards LLM traffic across model providers."
   },
   {
+    "name": "Bifrost",
+    "repo": "maximhq/bifrost",
+    "category": "Model Gateways and Routers",
+    "description": "Go-based LLM gateway with failover, load balancing and an OpenAI-compatible API you host yourself."
+  },
+  {
     "name": "Claude Code Router",
     "repo": "musistudio/claude-code-router",
     "category": "Model Gateways and Routers",
     "description": "Local router that sends coding-agent requests to different model providers based on rules."
+  },
+  {
+    "name": "CliRelay",
+    "repo": "kittors/CliRelay",
+    "category": "Model Gateways and Routers",
+    "description": "Self-hosted gateway that gives coding CLIs one API across several model providers."
   },
   {
     "name": "Envoy AI Gateway",
@@ -446,10 +660,26 @@
     "description": "Envoy-based gateway that routes and secures traffic to multiple LLM providers."
   },
   {
+    "name": "LiteLLM",
+    "repo": "BerriAI/litellm",
+    "category": "Model Gateways and Routers",
+    "description": "Python SDK and proxy server that calls 100+ LLM APIs in the OpenAI format.",
+    "tier": "source-available",
+    "license_note": "MIT core, enterprise/ directory under its own license"
+  },
+  {
     "name": "New API",
     "repo": "QuantumNous/new-api",
     "category": "Model Gateways and Routers",
     "description": "AI model gateway that fronts many upstream providers behind one key with quotas and billing."
+  },
+  {
+    "name": "Agenta",
+    "repo": "Agenta-AI/agenta",
+    "category": "Observability and Evals",
+    "description": "Open-source LLMOps platform for prompt management, evaluation and observability.",
+    "tier": "source-available",
+    "license_note": "MIT core, ee/ directories under their own license"
   },
   {
     "name": "Argilla",
@@ -476,6 +706,14 @@
     "description": "Framework for evaluating LLMs and agents with solvers, scorers, and sandboxed tool execution."
   },
   {
+    "name": "Langfuse",
+    "repo": "langfuse/langfuse",
+    "category": "Observability and Evals",
+    "description": "LLM engineering platform for tracing, prompt management and evals, self-hostable with Docker.",
+    "tier": "source-available",
+    "license_note": "MIT core, ee/ directories under their own license"
+  },
+  {
     "name": "LangWatch",
     "repo": "langwatch/langwatch",
     "category": "Observability and Evals",
@@ -492,6 +730,12 @@
     "repo": "mlflow/mlflow",
     "category": "Observability and Evals",
     "description": "ML lifecycle platform with tracing, prompt versioning, and evaluation for LLM applications."
+  },
+  {
+    "name": "OpenLIT",
+    "repo": "openlit/openlit",
+    "category": "Observability and Evals",
+    "description": "OpenTelemetry-native observability for LLM apps, with tracing, cost tracking and GPU metrics."
   },
   {
     "name": "OpenLLMetry",
@@ -588,6 +832,12 @@
     "description": "Federated SQL layer that connects databases and apps to AI models for querying and in-database ML."
   },
   {
+    "name": "pgvector",
+    "repo": "pgvector/pgvector",
+    "category": "RAG and Vector Databases",
+    "description": "Vector similarity search extension for PostgreSQL with exact and approximate nearest-neighbor indexes."
+  },
+  {
     "name": "PrivateGPT",
     "repo": "zylon-ai/private-gpt",
     "category": "RAG and Vector Databases",
@@ -600,10 +850,56 @@
     "description": "Vector similarity search engine in Rust with payload filtering and REST and gRPC APIs."
   },
   {
+    "name": "Quivr",
+    "repo": "The-Vibe-Company/quivr",
+    "category": "RAG and Vector Databases",
+    "description": "Open-source RAG app for chatting with your documents, runnable on your own infrastructure."
+  },
+  {
     "name": "RAGFlow",
     "repo": "infiniflow/ragflow",
     "category": "RAG and Vector Databases",
     "description": "Document-understanding RAG engine with chunking templates, citations, and agent workflows."
+  },
+  {
+    "name": "Weaviate",
+    "repo": "weaviate/weaviate",
+    "category": "RAG and Vector Databases",
+    "description": "Vector database with hybrid search and built-in embedding modules, runnable on your own servers.",
+    "tier": "source-available",
+    "license_note": "BSD-3 core, wl/ directory under Weaviate License"
+  },
+  {
+    "name": "zvec",
+    "repo": "alibaba/zvec",
+    "category": "RAG and Vector Databases",
+    "description": "In-process vector database library for fast similarity search without running a server."
+  },
+  {
+    "name": "LLM Wiki",
+    "repo": "nashsu/llm_wiki",
+    "category": "Search and Knowledge",
+    "description": "Desktop app that turns your documents into a linked wiki maintained by an LLM."
+  },
+  {
+    "name": "Meilisearch",
+    "repo": "meilisearch/meilisearch",
+    "category": "Search and Knowledge",
+    "description": "Search engine with typo tolerance and hybrid and vector search, run as a single self-hosted binary.",
+    "tier": "source-available",
+    "license_note": "MIT core, EE parts under Business Source License 1.1"
+  },
+  {
+    "name": "Open Notebook",
+    "repo": "lfnovo/open-notebook",
+    "category": "Search and Knowledge",
+    "description": "Self-hosted alternative to NotebookLM for organizing sources, notes and chats over your documents."
+  },
+  {
+    "name": "SearXNG",
+    "repo": "searxng/searxng",
+    "category": "Search and Knowledge",
+    "description": "Privacy-respecting metasearch engine you run yourself, aggregating results from many search services."
   },
   {
     "name": "faster-whisper",
@@ -634,10 +930,22 @@
     "description": "OpenAI-compatible FastAPI server wrapping the Kokoro text-to-speech model."
   },
   {
+    "name": "Moshi",
+    "repo": "kyutai-labs/moshi",
+    "category": "Speech and Audio",
+    "description": "Full-duplex speech-to-speech model and dialogue system for real-time spoken conversation."
+  },
+  {
     "name": "Piper",
     "repo": "OHF-Voice/piper1-gpl",
     "category": "Speech and Audio",
     "description": "Fast local neural text-to-speech engine that runs well on small single-board computers."
+  },
+  {
+    "name": "sherpa-onnx",
+    "repo": "k2-fsa/sherpa-onnx",
+    "category": "Speech and Audio",
+    "description": "Speech toolkit on ONNX Runtime for offline ASR, TTS and speaker tasks across many platforms."
   },
   {
     "name": "Silero VAD",
@@ -650,6 +958,12 @@
     "repo": "speaches-ai/speaches",
     "category": "Speech and Audio",
     "description": "OpenAI-compatible server for transcription and speech synthesis on your own hardware."
+  },
+  {
+    "name": "TypeWhisper",
+    "repo": "TypeWhisper/typewhisper-mac",
+    "category": "Speech and Audio",
+    "description": "Local speech-to-text app for macOS that runs models on-device, with optional cloud."
   },
   {
     "name": "Whisper",
@@ -668,5 +982,61 @@
     "repo": "m-bain/whisperX",
     "category": "Speech and Audio",
     "description": "Whisper pipeline that adds word-level timestamps and speaker diarization."
+  },
+  {
+    "name": "JoyAI-Image",
+    "repo": "jd-opensource/JoyAI-Image",
+    "category": "Vision and Multimodal",
+    "description": "Multimodal foundation model for image understanding and text-to-image generation."
+  },
+  {
+    "name": "MiniCPM-V",
+    "repo": "OpenBMB/MiniCPM-V",
+    "category": "Vision and Multimodal",
+    "description": "Multimodal model family for image, video and document understanding, with small variants for local use."
+  },
+  {
+    "name": "modlens",
+    "repo": "liustack/modlens",
+    "category": "Vision and Multimodal",
+    "description": "Vision bridge that gives text-only LLM tools image understanding through a plugin."
+  },
+  {
+    "name": "WeVisDoc",
+    "repo": "Tencent/WeVisDoc",
+    "category": "Vision and Multimodal",
+    "description": "End-to-end document parser for page images, fine-tuned from Qwen3-VL-2B-Instruct."
+  },
+  {
+    "name": "LiveKit",
+    "repo": "livekit/livekit",
+    "category": "Voice Agents",
+    "description": "Open-source WebRTC media server that realtime voice and video agent apps connect through."
+  },
+  {
+    "name": "LiveKit Agents",
+    "repo": "livekit/agents",
+    "category": "Voice Agents",
+    "description": "Framework for realtime voice and video AI agents, with plugins for speech, LLM and TTS services."
+  },
+  {
+    "name": "Pipecat",
+    "repo": "pipecat-ai/pipecat",
+    "category": "Voice Agents",
+    "description": "Python framework for real-time voice and multimodal conversational agents with pluggable services."
+  },
+  {
+    "name": "TEN Framework",
+    "repo": "TEN-framework/ten-framework",
+    "category": "Voice Agents",
+    "description": "Framework for real-time multimodal voice agents with modules for ASR, LLM, TTS and avatars.",
+    "tier": "source-available",
+    "license_note": "Apache-2.0 with additional conditions"
+  },
+  {
+    "name": "VoiceMem",
+    "repo": "xzf-thu/VoiceMem",
+    "category": "Voice Agents",
+    "description": "Memory infrastructure for voice agents that keeps conversation context across sessions."
   }
 ]

@@ -15,16 +15,22 @@ body:
     attributes:
       label: Category
       options:
-        - LLM Runtimes and Inference
-        - Chat Interfaces
         - Agents and Automation
-        - MCP Servers and Gateways
-        - RAG and Vector Databases
-        - Speech and Audio
-        - Image and Video Generation
+        - Chat Interfaces
         - Coding Assistants
-        - Observability and Evals
+        - Document AI and OCR
+        - Fine-Tuning and Training
+        - Home and Personal AI
+        - Image and Video Generation
+        - LLM Runtimes and Inference
+        - MCP Servers and Gateways
         - Model Gateways and Routers
+        - Observability and Evals
+        - RAG and Vector Databases
+        - Search and Knowledge
+        - Speech and Audio
+        - Vision and Multimodal
+        - Voice Agents
     validations:
       required: true
   - type: textarea
