@@ -98,14 +98,15 @@ if (sourceAvail.length) {
 out += `## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md). New projects go in \`data/projects.json\`; this file is generated.\n`
 writeFileSync('README.md', out)
 
-const tableHead = '| Project | Stars | Last push | License | Status |\n| --- | ---: | --- | --- | --- |'
+const tableHead = '| | Project | Stars | Last push | License | Status |\n| :-: | --- | ---: | --- | --- | --- |'
 // Colour follows our own thresholds, not the shields recency scale.
 const STATUS_COLOR = { active: 'brightgreen', slow: 'yellow', stale: 'orange', archived: 'red', gone: 'red', unknown: 'lightgrey' }
 const statusBadge = (st) => `![${st}](https://img.shields.io/badge/${st}-${STATUS_COLOR[st] ?? 'lightgrey'}?style=flat-square)`
 const trow = (p) => {
   const h = health[p.repo]
   const lic = p.tier === 'source-available' ? p.license_note : h.license
-  return `| [${p.name}](https://github.com/${p.repo}) | ${fmt(h.stars)} | ${h.pushed ?? '?'} | ${lic} | ${statusBadge(h.status)} |`
+  const logo = `<img src="https://github.com/${p.repo.split('/')[0]}.png?size=40" width="20" height="20" alt="">`
+  return `| ${logo} | [${p.name}](https://github.com/${p.repo}) | ${fmt(h.stars)} | ${h.pushed ?? '?'} | ${lic} | ${statusBadge(h.status)} |`
 }
 let live = `# Live Health Table\n\nRefreshed ${today} by the weekly job. Status is \`active\` (pushed within ${ACTIVE_DAYS} days) or \`slow\` (within ${SLOW_DAYS} days). Back to the [list](README.md).\n\n`
 for (const c of cats) {
