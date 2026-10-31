@@ -57,14 +57,9 @@ const sentence = (t) => {
   const c = t.charAt(0).toUpperCase() + t.slice(1)
   return /[.!?]$/.test(c) ? c : `${c}.`
 }
-// Stars and last push are live shields (colour shifts as a repo goes quiet);
-// the weekly job still decides when a project moves to UNMAINTAINED.md.
-const item = (p) => {
-  const lic = p.tier === 'source-available'
-    ? badge(`badge/license-${esc(p.license_note)}-orange`, 'License')
-    : badge(`github/license/${p.repo}`, 'License')
-  return `- [${p.name}](https://github.com/${p.repo}) - ${sentence(p.description)} ${badge(`github/stars/${p.repo}?label=stars`, 'Stars')} ${badge(`github/last-commit/${p.repo}?label=pushed`, 'Last push')} ${lic}`
-}
+// README stays a clean awesome-style list; the numbers live in LIVE.md.
+const item = (p) =>
+  `- [${p.name}](https://github.com/${p.repo}) - ${sentence(p.description)}${p.tier === 'source-available' ? ` (${p.license_note})` : ''}`
 const slug = (c) => c.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/ /g, '-')
 const byName = (a, b) => a.name.localeCompare(b.name)
 
@@ -87,6 +82,8 @@ ${alive.length} projects across local LLMs, chat interfaces, agents, MCP servers
 
 **${alive.length}** projects | **${activeCount}** active in the last ${ACTIVE_DAYS} days | **${fmt(totalStars)}** combined stars | **${dead.length}** unmaintained | refreshed ${today}
 
+See the [live health table](LIVE.md) for stars, last push and license per project.
+
 ## Contents
 
 ${cats.map((c) => `- [${c}](#${slug(c)}) (${count(c)})`).join('\n')}${sourceAvail.length ? `\n- [Source-Available](#source-available) (${sourceAvail.length})` : ''}
@@ -100,6 +97,19 @@ if (sourceAvail.length) {
 }
 out += `## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md). New projects go in \`data/projects.json\`; this file is generated.\n`
 writeFileSync('README.md', out)
+
+const tableHead = '| Project | Stars | Last push | License | Status |\n| --- | ---: | --- | --- | --- |'
+const trow = (p) => {
+  const h = health[p.repo]
+  const lic = p.tier === 'source-available' ? p.license_note : h.license
+  return `| [${p.name}](https://github.com/${p.repo}) | ${fmt(h.stars)} | ${h.pushed ?? '?'} | ${lic} | ${h.status} |`
+}
+let live = `# Live Health Table\n\nRefreshed ${today} by the weekly job. Status is \`active\` (pushed within ${ACTIVE_DAYS} days) or \`slow\` (within ${SLOW_DAYS} days). Back to the [list](README.md).\n\n`
+for (const c of cats) {
+  live += `## ${c}\n\n${tableHead}\n${open.filter((p) => p.category === c).sort(byName).map(trow).join('\n')}\n\n`
+}
+if (sourceAvail.length) live += `## Source-Available\n\n${tableHead}\n${sourceAvail.sort(byName).map(trow).join('\n')}\n`
+writeFileSync('LIVE.md', live)
 
 let un = `# Unmaintained\n\nProjects that were archived, deleted or silent for over ${SLOW_DAYS} days. They return to the main list on the next weekly refresh if they become active again.\n\n`
 un += dead.length ? dead.sort(byName).map((p) => `- [${p.name}](https://github.com/${p.repo}) - ${sentence(p.description)} (${health[p.repo].status}, last push ${health[p.repo].pushed ?? 'unknown'})`).join('\n') + '\n' : '_Nothing here yet._\n'
