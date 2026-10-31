@@ -1,0 +1,47 @@
+name: Submit a project
+description: Suggest a self-hostable open-source AI project
+title: 'Add: '
+labels: ['submission']
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: GitHub repo
+      placeholder: owner/name
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - LLM Runtimes and Inference
+        - Chat Interfaces
+        - Agents and Automation
+        - MCP Servers and Gateways
+        - RAG and Vector Databases
+        - Speech and Audio
+        - Image and Video Generation
+        - Coding Assistants
+        - Observability and Evals
+        - Model Gateways and Routers
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What it does and how to self-host it
+      description: One or two sentences, plus a link to the install docs.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Checks
+      options:
+        - label: Open source licence and runs on my own hardware or server
+          required: true
+        - label: Pushed to within the last 90 days and not archived
+          required: true
+        - label: If this is my own project, I say so above
+          required: false
