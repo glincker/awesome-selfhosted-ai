@@ -1,0 +1,12 @@
+.env
+node_modules
+.DS_Store
+
+# agent and local notes never go on the public remote
+CLAUDE.md
+AGENTS.md
+.claude/
+.cursor/
+.windsurf/
+docs-local/
+*.local.md
