@@ -14,6 +14,14 @@
     "description": "Python toolkit for building and evaluating LLM agents, with multi-model support."
   },
   {
+    "name": "agent-qa",
+    "repo": "vostride/agent-qa",
+    "category": "Agents and Automation",
+    "description": "Web and mobile QA agent with CLI/MCP, memidex memory, validated self-improvement and reviewable evidence.",
+    "tier": "source-available",
+    "license_note": "FSL-1.1-ALv2; commercial use limited to the license's Permitted Purpose"
+  },
+  {
     "name": "AgentScope",
     "repo": "agentscope-ai/agentscope",
     "category": "Agents and Automation",
@@ -777,6 +785,12 @@
     "repo": "vladmandic/sdnext",
     "category": "Image and Video Generation",
     "description": "WebUI for image and video generation with many diffusion models and multiple hardware backends."
+  },
+  {
+    "name": "stable-diffusion.cpp",
+    "repo": "leejet/stable-diffusion.cpp",
+    "category": "Image and Video Generation",
+    "description": "C/C++ inference for Stable Diffusion, FLUX and other image models, with no Python stack required."
   },
   {
     "name": "Wan2GP",
@@ -1893,13 +1907,5 @@
     "category": "Voice Agents",
     "description": "Voice AI building block with telephony integration and real-time speech processing.",
     "rising": true
-  },
-  {
-    "name": "agent-qa",
-    "repo": "vostride/agent-qa",
-    "category": "Agents and Automation",
-    "description": "Web and mobile QA agent with CLI/MCP, memidex memory, validated self-improvement and reviewable evidence.",
-    "tier": "source-available",
-    "license_note": "FSL-1.1-ALv2; commercial use limited to the license's Permitted Purpose"
   }
 ]
