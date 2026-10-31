@@ -32,6 +32,12 @@ if (Number.isFinite(MIN_STARS)) {
     })
     if (!res.ok) { errors.push(`${repo}: not found`); continue }
     const r = await res.json()
+    // A renamed or transferred repo answers under its old name, so compare canonical names.
+    if (r.full_name.toLowerCase() !== repo.toLowerCase()) {
+      const dupe = projects.some((x) => x.repo.toLowerCase() === r.full_name.toLowerCase())
+      errors.push(dupe ? `${repo}: redirects to ${r.full_name}, already listed` : `${repo}: renamed, use ${r.full_name}`)
+      continue
+    }
     const entry = projects.find((x) => x.repo.toLowerCase() === repo.toLowerCase())
     const floor = entry?.rising ? RISING_MIN_STARS : MIN_STARS
     if (r.archived) errors.push(`${repo}: archived`)
