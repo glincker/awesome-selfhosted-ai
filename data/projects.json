@@ -86,6 +86,13 @@
     "description": "Python framework for tool calling and multi-step workflows on self-hosted LLMs."
   },
   {
+    "name": "Guaardvark",
+    "repo": "guaardvark/guaardvark",
+    "category": "Agents and Automation",
+    "description": "Self-hosted AI studio on your own GPU for chatting with your files and running agents.",
+    "rising": true
+  },
+  {
     "name": "Hermes Agent",
     "repo": "NousResearch/hermes-agent",
     "category": "Agents and Automation",
@@ -172,6 +179,13 @@
     "description": "Type-safe Python agent framework with model-agnostic tool calling and structured outputs."
   },
   {
+    "name": "shodh-memory",
+    "repo": "varun29ankuS/shodh-memory",
+    "category": "Agents and Automation",
+    "description": "Local, LLM-free memory engine for AI agents, packaged as one offline Rust binary.",
+    "rising": true
+  },
+  {
     "name": "Sim",
     "repo": "simstudioai/sim",
     "category": "Agents and Automation",
@@ -252,6 +266,15 @@
     "license_note": "LobeHub Community License"
   },
   {
+    "name": "Lumiverse",
+    "repo": "prolix-oc/Lumiverse",
+    "category": "Chat Interfaces",
+    "description": "Self-hosted AI chat frontend with an extension ecosystem and a focus on performance.",
+    "rising": true,
+    "tier": "source-available",
+    "license_note": "Lumiverse Community License 2.2, not OSI"
+  },
+  {
     "name": "NextChat",
     "repo": "ChatGPTNextWeb/NextChat",
     "category": "Chat Interfaces",
@@ -282,6 +305,13 @@
     "repo": "oobabooga/text-generation-webui",
     "category": "Chat Interfaces",
     "description": "Gradio web UI for running local models through llama.cpp, Transformers, and ExLlama backends."
+  },
+  {
+    "name": "Agentrove",
+    "repo": "Mng-dev-ai/agentrove",
+    "category": "Coding Assistants",
+    "description": "Self-hosted workspace to run and orchestrate several AI coding agent CLIs in one place.",
+    "rising": true
   },
   {
     "name": "Archon",
@@ -358,6 +388,13 @@
     "description": "Open-source coding agent for VS Code and the terminal, with bring-your-own model keys."
   },
   {
+    "name": "Mira",
+    "repo": "miracodeai/mira",
+    "category": "Coding Assistants",
+    "description": "Self-hosted AI code reviewer with indexed pull request reviews and walkthroughs.",
+    "rising": true
+  },
+  {
     "name": "Mistral Vibe",
     "repo": "mistralai/mistral-vibe",
     "category": "Coding Assistants",
@@ -428,6 +465,15 @@
     "repo": "docling-project/docling",
     "category": "Document AI and OCR",
     "description": "Parses PDF, DOCX, PPTX and HTML into structured Markdown or JSON, with OCR and table recovery."
+  },
+  {
+    "name": "franken_ocr",
+    "repo": "Dicklesworthstone/franken_ocr",
+    "category": "Document AI and OCR",
+    "description": "CPU-only OCR engine written in Rust that runs the Unlimited-OCR vision-language model.",
+    "rising": true,
+    "tier": "source-available",
+    "license_note": "MIT with OpenAI and Anthropic rider"
   },
   {
     "name": "GLM-OCR",
@@ -538,6 +584,13 @@
     "repo": "oumi-ai/oumi",
     "category": "Fine-Tuning and Training",
     "description": "Open platform with a CLI for fine-tuning, evaluating and deploying open LLMs and vision-language models."
+  },
+  {
+    "name": "PMetal",
+    "repo": "Epistates/pmetal",
+    "category": "Fine-Tuning and Training",
+    "description": "Apple Silicon framework for local LLM inference and LoRA or QLoRA fine-tuning.",
+    "rising": true
   },
   {
     "name": "Soup",
@@ -838,10 +891,24 @@
     "description": "Single-file executables that bundle a model with llama.cpp so it runs locally on most computers."
   },
   {
+    "name": "llamastash",
+    "repo": "llamastash/llamastash",
+    "category": "LLM Runtimes and Inference",
+    "description": "Terminal-native orchestrator that launches and manages local LLM engines and models with low overhead.",
+    "rising": true
+  },
+  {
     "name": "llm-d",
     "repo": "llm-d/llm-d",
     "category": "LLM Runtimes and Inference",
     "description": "Kubernetes-native framework for distributed LLM inference that spreads serving across cluster nodes."
+  },
+  {
+    "name": "llmserve",
+    "repo": "AlexsJones/llmserve",
+    "category": "LLM Runtimes and Inference",
+    "description": "Terminal UI that picks a local model and backend, then starts a server for it.",
+    "rising": true
   },
   {
     "name": "LMDeploy",
@@ -1018,10 +1085,24 @@
     "description": "Pythonic framework for building MCP servers and clients."
   },
   {
+    "name": "fxhoudinimcp",
+    "repo": "healkeiser/fxhoudinimcp",
+    "category": "MCP Servers and Gateways",
+    "description": "MCP server that exposes SideFX Houdini scene control to AI agents.",
+    "rising": true
+  },
+  {
     "name": "GitHub MCP Server",
     "repo": "github/github-mcp-server",
     "category": "MCP Servers and Gateways",
     "description": "Official MCP server exposing GitHub repositories, issues, and pull requests to AI clients."
+  },
+  {
+    "name": "Kindly Web Search MCP Server",
+    "repo": "Shelpuk-AI-Technology-Consulting/kindly-web-search-mcp-server",
+    "category": "MCP Servers and Gateways",
+    "description": "MCP server for web search and robust page content retrieval in AI coding tools.",
+    "rising": true
   },
   {
     "name": "Korean Law MCP",
@@ -1072,6 +1153,13 @@
     "description": "MCP server giving LLM clients browser control through Playwright accessibility snapshots."
   },
   {
+    "name": "thunderbird-mcp",
+    "repo": "TKasperczyk/thunderbird-mcp",
+    "category": "MCP Servers and Gateways",
+    "description": "MCP server that gives AI assistants access to Thunderbird email, contacts and calendar.",
+    "rising": true
+  },
+  {
     "name": "Unla",
     "repo": "AmoyLab/Unla",
     "category": "MCP Servers and Gateways",
@@ -1120,6 +1208,13 @@
     "description": "AI-native API gateway that adds model routing and AI plugins on top of Envoy."
   },
   {
+    "name": "keirouter",
+    "repo": "mydisha/keirouter",
+    "category": "Model Gateways and Routers",
+    "description": "Self-hostable AI gateway that proxies requests to multiple model providers.",
+    "rising": true
+  },
+  {
     "name": "LiteLLM",
     "repo": "BerriAI/litellm",
     "category": "Model Gateways and Routers",
@@ -1140,6 +1235,13 @@
     "description": "AI model gateway that fronts many upstream providers behind one key with quotas and billing."
   },
   {
+    "name": "Nyro",
+    "repo": "nyroway/nyro",
+    "category": "Model Gateways and Routers",
+    "description": "Self-hosted AI gateway that lets coding CLIs and SDKs call any model provider.",
+    "rising": true
+  },
+  {
     "name": "optillm",
     "repo": "algorithmicsuperintelligence/optillm",
     "category": "Model Gateways and Routers",
@@ -1150,6 +1252,13 @@
     "repo": "NVIDIA-NeMo/Switchyard",
     "category": "Model Gateways and Routers",
     "description": "Rust proxy that routes traffic across LLM providers while keeping OpenAI and Anthropic API compatibility."
+  },
+  {
+    "name": "YoloRouter",
+    "repo": "yolorouter/yolorouter",
+    "category": "Model Gateways and Routers",
+    "description": "Self-hosted OpenAI-compatible LLM gateway with provider failover and key rotation.",
+    "rising": true
   },
   {
     "name": "Agenta",
@@ -1252,6 +1361,13 @@
     "description": "ML lifecycle platform with tracing, prompt versioning, and evaluation for LLM applications."
   },
   {
+    "name": "mlxtop",
+    "repo": "maximpri/mlxtop",
+    "category": "Observability and Evals",
+    "description": "Terminal monitor for local LLMs showing memory, GPU use and tokens per second.",
+    "rising": true
+  },
+  {
     "name": "OpenLIT",
     "repo": "openlit/openlit",
     "category": "Observability and Evals",
@@ -1294,6 +1410,20 @@
     "repo": "NVIDIA/SkillSpector",
     "category": "Observability and Evals",
     "description": "Security scanner that checks agent skills and MCP tools for prompt injection and exfiltration risks."
+  },
+  {
+    "name": "zx-bench",
+    "repo": "suncityldp/zx-bench",
+    "category": "Observability and Evals",
+    "description": "Local LLM benchmarking platform with versioned datasets and deterministic scoring.",
+    "rising": true
+  },
+  {
+    "name": "Basjoo",
+    "repo": "haoyiyin/basjoo",
+    "category": "RAG and Vector Databases",
+    "description": "Self-hosted AI customer support platform with per-knowledge-base RAG on Qdrant.",
+    "rising": true
   },
   {
     "name": "Chroma",
@@ -1498,6 +1628,20 @@
     "description": "Autonomous research agent that searches the web and writes cited reports on any topic."
   },
   {
+    "name": "gyotaku",
+    "repo": "xevrion/gyotaku",
+    "category": "Search and Knowledge",
+    "description": "Offline Linux app that searches your screenshots by the text inside them.",
+    "rising": true
+  },
+  {
+    "name": "kensaku",
+    "repo": "yjid/kensaku",
+    "category": "Search and Knowledge",
+    "description": "Local search across documents, code and screenshots, indexed on your own machine.",
+    "rising": true
+  },
+  {
     "name": "LLM Wiki",
     "repo": "nashsu/llm_wiki",
     "category": "Search and Knowledge",
@@ -1588,10 +1732,31 @@
     "description": "Full-duplex speech-to-speech model and dialogue system for real-time spoken conversation."
   },
   {
+    "name": "Myna",
+    "repo": "canonical/myna",
+    "category": "Speech and Audio",
+    "description": "Lightweight speech-to-text desktop application for Ubuntu.",
+    "rising": true
+  },
+  {
+    "name": "openasr",
+    "repo": "QuintinShaw/openasr",
+    "category": "Speech and Audio",
+    "description": "Local-first speech-to-text command line tool that runs without cloud services or telemetry.",
+    "rising": true
+  },
+  {
     "name": "Piper",
     "repo": "OHF-Voice/piper1-gpl",
     "category": "Speech and Audio",
     "description": "Fast local neural text-to-speech engine that runs well on small single-board computers."
+  },
+  {
+    "name": "ScribeCrate",
+    "repo": "hwdsl2/scribecrate",
+    "category": "Speech and Audio",
+    "description": "Self-hosted Whisper speech-to-text server powered by faster-whisper.",
+    "rising": true
   },
   {
     "name": "sherpa-onnx",
@@ -1678,6 +1843,13 @@
     "description": "End-to-end document parser for page images, fine-tuned from Qwen3-VL-2B-Instruct."
   },
   {
+    "name": "flowcat",
+    "repo": "AreevAI/flowcat",
+    "category": "Voice Agents",
+    "description": "Self-hosted Rust runtime for real-time voice agents, shipped as a single binary.",
+    "rising": true
+  },
+  {
     "name": "LiveKit",
     "repo": "livekit/livekit",
     "category": "Voice Agents",
@@ -1714,5 +1886,12 @@
     "repo": "xzf-thu/VoiceMem",
     "category": "Voice Agents",
     "description": "Memory infrastructure for voice agents that keeps conversation context across sessions."
+  },
+  {
+    "name": "VoicEra",
+    "repo": "COSS-India/VoicEra",
+    "category": "Voice Agents",
+    "description": "Voice AI building block with telephony integration and real-time speech processing.",
+    "rising": true
   }
 ]
