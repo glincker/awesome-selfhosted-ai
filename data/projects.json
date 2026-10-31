@@ -366,6 +366,12 @@
     "license_note": "FSL-1.1-MIT (converts to MIT after two years)"
   },
   {
+    "name": "DeepSeek Harness",
+    "repo": "deepseek-ai/deepseek-harness",
+    "category": "Coding Assistants",
+    "description": "Plugin-based agent harness for DeepSeek models with a local Web UI."
+  },
+  {
     "name": "DeepSeek-Reasonix",
     "repo": "esengine/DeepSeek-Reasonix",
     "category": "Coding Assistants",
