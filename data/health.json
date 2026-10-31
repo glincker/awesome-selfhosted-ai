@@ -22,7 +22,7 @@
   },
   "browser-use/browser-use": {
     "status": "active",
-    "stars": 119615,
+    "stars": 119616,
     "pushed": "2026-10-31",
     "license": "MIT",
     "checked": "2026-10-31"
@@ -57,7 +57,7 @@
   },
   "langflow-ai/langflow": {
     "status": "active",
-    "stars": 156179,
+    "stars": 156180,
     "pushed": "2026-10-31",
     "license": "MIT",
     "checked": "2026-10-31"
@@ -183,7 +183,7 @@
   },
   "open-webui/open-webui": {
     "status": "active",
-    "stars": 157321,
+    "stars": 157322,
     "pushed": "2026-10-31",
     "license": "NOASSERTION",
     "checked": "2026-10-31"
@@ -211,7 +211,7 @@
   },
   "openai/codex": {
     "status": "active",
-    "stars": 132183,
+    "stars": 132185,
     "pushed": "2026-10-31",
     "license": "Apache-2.0",
     "checked": "2026-10-31"
@@ -729,7 +729,7 @@
   },
   "openai/whisper": {
     "status": "active",
-    "stars": 111613,
+    "stars": 111614,
     "pushed": "2026-08-31",
     "license": "MIT",
     "checked": "2026-10-31"
