@@ -50,41 +50,58 @@ for (const p of projects) {
 }
 writeFileSync('data/health.json', JSON.stringify(health, null, 2) + '\n')
 
-const fmt = (n) => (n >= 1000 ? `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k` : String(n ?? '?'))
-const row = (p) => {
-  const h = health[p.repo]
-  return `| [${p.name}](https://github.com/${p.repo}) | ${fmt(h.stars)} | ${h.pushed ?? '?'} | ${h.license ?? '?'} | ${h.status} | ${p.description} |`
+const fmt = (n) => (n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : n >= 1000 ? `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k` : String(n ?? 0))
+const badge = (path, alt) => `![${alt}](https://img.shields.io/${path}${path.includes('?') ? '&' : '?'}style=flat-square)`
+const esc = (t) => encodeURIComponent(t.replace(/-/g, '--').replace(/_/g, '__'))
+const sentence = (t) => {
+  const c = t.charAt(0).toUpperCase() + t.slice(1)
+  return /[.!?]$/.test(c) ? c : `${c}.`
 }
-const head = '| Project | Stars | Last push | License | Status | What it is |\n| --- | ---: | --- | --- | --- | --- |'
-const live = projects.filter((p) => ['active', 'slow', 'unknown'].includes(health[p.repo].status))
-const dead = projects.filter((p) => !live.includes(p))
-const cats = [...new Set(live.map((p) => p.category))].sort()
-const total = live.length
+// Stars and last push are live shields (colour shifts as a repo goes quiet);
+// the weekly job still decides when a project moves to UNMAINTAINED.md.
+const item = (p) => {
+  const lic = p.tier === 'source-available'
+    ? badge(`badge/license-${esc(p.license_note)}-orange`, 'License')
+    : badge(`github/license/${p.repo}`, 'License')
+  return `- [${p.name}](https://github.com/${p.repo}) - ${sentence(p.description)} ${badge(`github/stars/${p.repo}?label=stars`, 'Stars')} ${badge(`github/last-commit/${p.repo}?label=pushed`, 'Last push')} ${lic}`
+}
+const slug = (c) => c.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/ /g, '-')
+const byName = (a, b) => a.name.localeCompare(b.name)
 
-let out = `# Awesome Self-Hosted AI
+const alive = projects.filter((p) => ['active', 'slow', 'unknown'].includes(health[p.repo].status))
+const dead = projects.filter((p) => !alive.includes(p))
+const open = alive.filter((p) => p.tier !== 'source-available')
+const sourceAvail = alive.filter((p) => p.tier === 'source-available')
+const cats = [...new Set(open.map((p) => p.category))].sort()
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Weekly refresh](https://github.com/glincker/awesome-selfhosted-ai/actions/workflows/weekly.yml/badge.svg)](https://github.com/glincker/awesome-selfhosted-ai/actions/workflows/weekly.yml)
+const totalStars = alive.reduce((n, p) => n + (health[p.repo].stars ?? 0), 0)
+const activeCount = alive.filter((p) => health[p.repo].status === 'active').length
+const today = new Date().toISOString().slice(0, 10)
+const count = (c) => open.filter((p) => p.category === c).length
 
-Open-source AI you can run on your own hardware: local LLMs, chat UIs, agents, MCP servers, RAG, speech and image generation.
+let out = `# Awesome Self-Hosted AI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Every entry is checked by a weekly job against the GitHub API. Projects with no push for more than ${SLOW_DAYS} days, or that get archived or deleted, move to the Unmaintained list automatically, so this list does not rot.
+> Open-source AI you can run on your own hardware or server.
 
-**${total} maintained projects.** Status: \`active\` pushed within ${ACTIVE_DAYS} days, \`slow\` pushed within ${SLOW_DAYS} days.
+${alive.length} projects across local LLMs, chat interfaces, agents, MCP servers, RAG, speech and image generation. A weekly job checks every project against the GitHub API, and anything archived, deleted or silent for over a year moves to [UNMAINTAINED.md](UNMAINTAINED.md).
 
-Missing something new? [Submit a project](https://github.com/glincker/awesome-selfhosted-ai/issues/new?template=submit.yml). Rules are in [CONTRIBUTING.md](CONTRIBUTING.md).
+**${alive.length}** projects | **${activeCount}** active in the last ${ACTIVE_DAYS} days | **${fmt(totalStars)}** combined stars | **${dead.length}** unmaintained | refreshed ${today}
 
 ## Contents
 
-${cats.map((c) => `- [${c}](#${c.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/ /g, '-')})`).join('\n')}
-- [Unmaintained](#unmaintained)
+${cats.map((c) => `- [${c}](#${slug(c)}) (${count(c)})`).join('\n')}${sourceAvail.length ? `\n- [Source-Available](#source-available) (${sourceAvail.length})` : ''}
 
 `
 for (const c of cats) {
-  out += `## ${c}\n\n${head}\n${live.filter((p) => p.category === c).sort((a, b) => a.name.localeCompare(b.name)).map(row).join('\n')}\n\n`
+  out += `## ${c}\n\n${open.filter((p) => p.category === c).sort(byName).map(item).join('\n')}\n\n`
 }
-out += `## Unmaintained\n\nKept here for reference. If a project is active again it returns to its category on the next refresh.\n\n`
-out += dead.length ? `${head}\n${dead.map(row).join('\n')}\n\n` : '_Nothing here yet._\n\n'
-out += `## License\n\n[CC0 1.0](LICENSE). Data refreshed ${new Date().toISOString().slice(0, 10)}.\n`
+if (sourceAvail.length) {
+  out += `## Source-Available\n\nWidely used and self-hostable, but the license adds terms beyond a standard open-source license. Check them before commercial use.\n\n${sourceAvail.sort(byName).map(item).join('\n')}\n\n`
+}
+out += `## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md). New projects go in \`data/projects.json\`; this file is generated.\n`
 writeFileSync('README.md', out)
+
+let un = `# Unmaintained\n\nProjects that were archived, deleted or silent for over ${SLOW_DAYS} days. They return to the main list on the next weekly refresh if they become active again.\n\n`
+un += dead.length ? dead.sort(byName).map((p) => `- [${p.name}](https://github.com/${p.repo}) - ${sentence(p.description)} (${health[p.repo].status}, last push ${health[p.repo].pushed ?? 'unknown'})`).join('\n') + '\n' : '_Nothing here yet._\n'
+writeFileSync('UNMAINTAINED.md', un)
 console.log(`refreshed ${projects.length} projects, ${dead.length} unmaintained`)

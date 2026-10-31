@@ -14,6 +14,8 @@ for (const p of projects) {
   if (!/^[\w.-]+\/[\w.-]+$/.test(p.repo ?? '')) errors.push(`${id}: repo must be owner/name`)
   if (seen.has(p.repo?.toLowerCase())) errors.push(`${id}: duplicate`)
   seen.add(p.repo?.toLowerCase())
+  if (p.tier !== undefined && p.tier !== 'source-available') errors.push(`${id}: unknown tier`)
+  if (p.tier === 'source-available' && !p.license_note) errors.push(`${id}: license_note required`)
   if ((p.description ?? '').length > 120) errors.push(`${id}: description over 120 chars`)
   if (/[\u2013\u2014]/.test(p.description ?? '')) errors.push(`${id}: no em or en dashes`)
 }
