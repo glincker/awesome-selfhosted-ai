@@ -1,0 +1,39 @@
+name: Weekly refresh
+
+on:
+  schedule:
+    - cron: '17 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  ACTIVE_DAYS: 90
+  SLOW_DAYS: 365
+  MIN_STARS: 500
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/update.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Open PR if data changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet; then echo "no changes"; exit 0; fi
+          branch="refresh/$(date +%Y-%m-%d)"
+          git config user.name "glincker-bot"
+          git config user.email "bot@glincker.com"
+          git checkout -b "$branch"
+          git commit -am "chore: weekly health refresh"
+          git push -u origin "$branch"
+          gh pr create --title "chore: weekly health refresh" --body "Automated refresh of stars, last push and status. Projects past the stale threshold move to Unmaintained."
