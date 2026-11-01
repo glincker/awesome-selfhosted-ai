@@ -469,6 +469,12 @@
     "description": "Turns screenshots, mockups, and Figma designs into frontend code using vision-language models."
   },
   {
+    "name": "Sno Station",
+    "repo": "sno-ai/sno-station",
+    "category": "Coding Assistants",
+    "description": "Runs Codex, Claude Code, Cursor, Hermes Agent and OpenClaw as one team on your machine, with handoff at usage limits."
+  },
+  {
     "name": "SWE-agent",
     "repo": "SWE-agent/SWE-agent",
     "category": "Coding Assistants",
