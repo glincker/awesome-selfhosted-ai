@@ -408,7 +408,7 @@
     "description": "End-to-end encrypted app to orchestrate Claude Code, Codex and other coding agents from desktop, phone and web."
   },
 
-    "name": "jcode",
+      {"name": "jcode",
     "repo": "1jehuang/jcode",
     "category": "Coding Assistants",
     "description": "Rust coding agent harness built for running many agent sessions at once."
