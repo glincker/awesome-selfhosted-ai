@@ -408,12 +408,6 @@
     "description": "End-to-end encrypted app to orchestrate Claude Code, Codex and other coding agents from desktop, phone and web."
   },
 
-
-
-
-
-
-  {
     "name": "jcode",
     "repo": "1jehuang/jcode",
     "category": "Coding Assistants",
