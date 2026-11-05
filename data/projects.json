@@ -1931,5 +1931,12 @@
     "category": "Voice Agents",
     "description": "Voice AI building block with telephony integration and real-time speech processing.",
     "rising": true
+  },
+  {
+    "name": "Phosphene",
+    "repo": "mrbizarro/Phosphene",
+    "category": "Image and Video Generation",
+    "description": "AI video, image and music studio that runs locally on Apple Silicon Macs.",
+    "rising": true
   }
 ]
