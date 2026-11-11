@@ -1945,6 +1945,12 @@
     "rising": true
   },
   {
+    "name": "Kortix",
+    "repo": "kortix-ai/CompanyOS",
+    "category": "Agents and Automation",
+    "description": "Open-source CompanyOS: agents, skills and flows as files in one git repo, each session on its own cloud computer."
+  },
+  {
     "name": "5dive",
     "repo": "5dive-ai/5dive",
     "category": "Agents and Automation",
