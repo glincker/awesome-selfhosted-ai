@@ -1123,6 +1123,12 @@
     "description": "Pythonic framework for building MCP servers and clients."
   },
   {
+    "name": "Firecrawl MCP Server",
+    "repo": "firecrawl/firecrawl-mcp-server",
+    "category": "MCP Servers and Gateways",
+    "description": "Official MCP server for Firecrawl search, scrape, crawl and extraction, with Docker and self-hosted support."
+  },
+  {
     "name": "fxhoudinimcp",
     "repo": "healkeiser/fxhoudinimcp",
     "category": "MCP Servers and Gateways",
