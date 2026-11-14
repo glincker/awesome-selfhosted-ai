@@ -1954,7 +1954,7 @@
     "name": "5dive",
     "repo": "5dive-ai/5dive",
     "category": "Agents and Automation",
-    "description": "Runs AI agents like Claude Code and Codex as Linux services on your server, sharing tasks and reviewing each other.",
+    "description": "Runs AI agents like Claude Code and Codex as Linux services on your server, sharing tasks and reviewing each other."
   },
   {
     "name": "Phosphene",
@@ -1962,5 +1962,11 @@
     "category": "Image and Video Generation",
     "description": "AI video, image and music studio that runs locally on Apple Silicon Macs.",
     "rising": true
+  },
+  {
+    "name": "SandBase Harness",
+    "repo": "sandbaseai/sandbase-harness",
+    "category": "Agents and Automation",
+    "description": "Self-hosted agent runtime with sandboxed sessions, persistent memory, audit replay, and MCP tool integration."
   }
 ]
