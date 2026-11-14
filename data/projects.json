@@ -1962,5 +1962,12 @@
     "category": "Image and Video Generation",
     "description": "AI video, image and music studio that runs locally on Apple Silicon Macs.",
     "rising": true
+  },
+  {
+    "name": "Equibles",
+    "repo": "daniel3303/Equibles",
+    "category": "MCP Servers and Gateways",
+    "description": "MCP server that serves SEC filings, financials, 13F holdings and insider trades from a database you host.",
+    "rising": true
   }
 ]
