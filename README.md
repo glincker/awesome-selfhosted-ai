@@ -210,6 +210,7 @@ See the [live health table](LIVE.md) for stars, last push and license per projec
 - [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp) - C-based MCP server that indexes repositories into local type-resolved knowledge graphs.
 - [DesktopCommander MCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) - MCP server that gives AI clients terminal control, file search, and diff-based file editing.
 - [Docker MCP Gateway](https://github.com/docker/mcp-gateway) - Runs MCP servers in isolated containers and exposes them to clients through one gateway.
+- [No Stairs Please MCP](https://nostairsplease.com/mcp) - Public MCP server exposing structured data for 1,700+ US and Canadian live-music venues.
 - [FastMCP](https://github.com/PrefectHQ/fastmcp) - Pythonic framework for building MCP servers and clients.
 - [GitHub MCP Server](https://github.com/github/github-mcp-server) - Official MCP server exposing GitHub repositories, issues, and pull requests to AI clients.
 - [Korean Law MCP](https://github.com/chrisryugj/korean-law-mcp) - MCP server and CLI for querying Korea's official statutes, precedents and administrative rules.
