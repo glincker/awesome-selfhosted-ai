@@ -1955,6 +1955,7 @@
     "repo": "5dive-ai/5dive",
     "category": "Agents and Automation",
     "description": "Runs AI agents like Claude Code and Codex as Linux services on your server, sharing tasks and reviewing each other.",
+    "rising": true
   },
   {
     "name": "Phosphene",
