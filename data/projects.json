@@ -87,6 +87,14 @@
     "tier": "source-available",
     "license_note": "Modified Apache-2.0 with extra terms"
   },
+  
+{
+  "name": "FeedLog",
+  "repo": "linkcraftstudio/feedlog",
+  "category": "Agents and Automation",
+  "description": "Self-hosted AI customer support app with a knowledge base, shared inbox, and customer feedback workflows.",
+  "rising": true
+},
   {
     "name": "Forge",
     "repo": "antoinezambelli/forge",
