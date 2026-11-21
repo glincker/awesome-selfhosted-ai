@@ -1962,5 +1962,11 @@
     "category": "Image and Video Generation",
     "description": "AI video, image and music studio that runs locally on Apple Silicon Macs.",
     "rising": true
+  },
+  {
+    "name": "AgentField",
+    "repo": "Agent-Field/agentfield",
+    "category": "Agents and Automation",
+    "description": "Framework for writing agents that run as backend services, with durable runs, identity, policy and audit logs."
   }
 ]
