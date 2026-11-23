@@ -202,6 +202,7 @@ See the [live health table](LIVE.md) for stars, last push and license per projec
 
 ## MCP Servers and Gateways
 
+- [fitv-mcp](https://github.com/hanshs474/fitv-mcp) - Open-source MCP server for [Free Image to Video](https://freeimagetovideo.ai/) image-to-video and text-to-video generation with synchronized sound and no watermark.
 - [agentgateway](https://github.com/agentgateway/agentgateway) - Rust proxy for agent traffic that supports MCP and A2A protocols.
 - [AI Memory](https://github.com/akitaonrails/ai-memory) - Rust memory server and MCP client that gives coding CLIs long-term recall with full-text search.
 - [AnythingMCP](https://github.com/HelpCode-ai/anythingmcp) - Turns REST, GraphQL, SOAP and SQL APIs into MCP tools behind one gateway.
