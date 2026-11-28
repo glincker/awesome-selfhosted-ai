@@ -1954,7 +1954,7 @@
     "name": "5dive",
     "repo": "5dive-ai/5dive",
     "category": "Agents and Automation",
-    "description": "Runs AI agents like Claude Code and Codex as Linux services on your server, sharing tasks and reviewing each other.",
+    "description": "Runs AI agents like Claude Code and Codex as Linux services on your server, sharing tasks and reviewing each other."
   },
   {
     "name": "Phosphene",
@@ -1962,5 +1962,13 @@
     "category": "Image and Video Generation",
     "description": "AI video, image and music studio that runs locally on Apple Silicon Macs.",
     "rising": true
+  },
+  {
+    "name": "OpenWork",
+    "repo": "different-ai/openwork",
+    "category": "Agents and Automation",
+    "description": "Desktop agent app for local files, skills and MCP tools, with a self-hosted control plane for teams.",
+    "tier": "source-available",
+    "license_note": "MIT core, ee directory under separate terms"
   }
 ]
